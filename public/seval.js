@@ -7,6 +7,7 @@ class node{
         this.data = d; 
     }
 }
+
 class stack{
     top;
     isEmpty=()=>{
