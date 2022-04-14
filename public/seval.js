@@ -1,5 +1,4 @@
 const opplist = [];
-//const LinkedList = require('./datastructures/LinkedList');
 
 class node{
     data; 
