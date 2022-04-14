@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Press Enter For New Table Row</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./seval.js"></script>
+<link rel="stylesheet" href="./view.css">
+<script>
+    console.log(compute("sin(2)"));
+    $(document).on('keypress',function(e) {
+    if(e.which == 13) {
+       addRow();
+       var a = (document.querySelectorAll('#math td').length/3)-1;
+       console.log("a "+a);
+       $("#input" + a).focus();
+    }
+    });   
+
+    $(document).on('keyup',function(e) {
+    for(var i = 1; i<(document.querySelectorAll('#math td').length)/3;i++){
+      
+        document.getElementById("output"+i).innerHTML = compute("0+"+$("#input" + i).val(),true);
+     // $('#output'+i).val($("#input" + i).val());
+
+    }
+    });
+</script>       
+      
+    
+
+<body>
+    <h1>STRING MATHEMATICAL EXPRESSION INTERPRETER </h1>
+    <h4>Press enter to start a line. Then, input your expression in the white textbox provided. Your output will show in the output column. </h4>
+        <div>
+            </div >
+        
+            
+            
+            
+                <table style="width:80%" id="math"  border="1" cellpadding="2">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td style="width:50%"><b>Input</b></td>
+                        <td style="width:50%"><b>Output</b></td>
+                    </tr>
+                </table>
+                &nbsp;
+            
+            </div>
+            <div >
+                <textarea readonly>
+
+    This is a scientific calculator. 
+    
+        Currently, the following operations have been implemented:
+            
+            multiplication, division, addition, subtraction | syntax : *, /, +, -
+            exponent | syntax "a^x"
+            sin | syntax: "sin a"
+            cos | syntax: "cos a"
+            tan | syntax: "tan a"
+        
+    Multiple layers of parentheses ARE supported. 
+    Decimals ARE supported.
+    Negative numbers ARE supported. 
+    
+    The lack of an operation will be filled in with multiplication, similar to 
+    common math notation. 
+                    
+                </textarea>
+            </div>
+        </div>
+    
+</body>
+</html>

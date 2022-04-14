@@ -1,0 +1,30 @@
+
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background: rgba( 71, 147, 227, 1);
+}
+textarea{
+	width :800px;
+	height: 360px;
+	border :4px solid blue;
+	padding-bottom:1px;
+	resize:none;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-size: large;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+table, th, td {
+	border: 1px solid;
+	border-color: black;
+	
+  }
+
+  tr:nth-child(even) {background-color: #9be8b0;}
+  tr:nth-child(odd) {background-color: #f2f2f2;}
+  
+  th {
+	text-align: center;
+  }
+  
