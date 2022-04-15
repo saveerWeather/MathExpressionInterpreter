@@ -240,6 +240,9 @@ compute = (math="",bool=false)=>{
     if(bool) {count = 0}else {count++;}
     if(count>20) return "Too much work I'd rather not";
     console.log(math)
+    if(bool){
+        if(math.split("(").length!=math.split(")").length) return "Unknown Operation";
+    }
    // if(math.split("(").length!=math.split(")").length) return "Unknown Operation";
     math = String(math);
     math = math.split(' ').join('');
@@ -344,4 +347,4 @@ function deleteRow(obj) {
 
  
 
-console.log(compute("3^(2+5sin0))",true));
+console.log(compute("cos(1+2",true));
