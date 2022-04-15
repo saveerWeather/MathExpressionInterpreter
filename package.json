@@ -1,0 +1,19 @@
+{
+  "name": "stringeval",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start":"node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saveerWeather/MathExpressionInterpreter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saveerWeather/MathExpressionInterpreter/issues"
+  },
+  "homepage": "https://github.com/saveerWeather/MathExpressionInterpreter#readme"
+}
