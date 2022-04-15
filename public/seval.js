@@ -149,7 +149,7 @@ trig = (nums,ops)=>{
 
 }
 power = (nums,ops)=>{
-    var idx = ops.indexOf('^'); 
+    var idx = ops.lastIndexOf('^'); 
     if(idx<0){
         var ret= "";
         for(var i = 0; i<ops.length;i++){
@@ -347,4 +347,4 @@ function deleteRow(obj) {
 
  
 
-console.log(compute("cos(1+2",true));
+console.log(compute("3^3^3",true));
