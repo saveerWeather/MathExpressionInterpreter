@@ -235,6 +235,10 @@ trigchange = math=>{
     changed = changed.replace(/tan/g,'(1)T');
     return changed; 
 }
+constantchange = math=>{
+    changed = math.replace(/pi/g,'3.14159265359');
+    changed = changed.replace(/e/g,'2.71828182846');
+    return changed;
 var count; 
 compute = (math="",bool=false)=>{
     if(bool) {count = 0}else {count++;}
@@ -246,6 +250,7 @@ compute = (math="",bool=false)=>{
    // if(math.split("(").length!=math.split(")").length) return "Unknown Operation";
     math = String(math);
     math = math.split(' ').join('');
+    math = constantchange(math);
     math = trigchange(math);
     console.log(math)
     if(!charCheck(math)) return "Unknown Operation";
